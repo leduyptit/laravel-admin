@@ -1,6 +1,6 @@
 <?php
 
-namespace Appzcoder\LaravelAdmin;
+namespace Leduyptit\LaravelAdmin;
 
 use File;
 use Illuminate\Console\Command;
@@ -53,7 +53,7 @@ class LaravelAdminCommand extends Command
 
         $this->info("Publishing the assets");
         $this->call('vendor:publish', ['--provider' => 'Appzcoder\CrudGenerator\CrudGeneratorServiceProvider', '--force' => true]);
-        $this->call('vendor:publish', ['--provider' => 'Appzcoder\LaravelAdmin\LaravelAdminServiceProvider', '--force' => true]);
+        $this->call('vendor:publish', ['--provider' => 'Leduyptit\LaravelAdmin\LaravelAdminServiceProvider', '--force' => true]);
         $this->call('vendor:publish', ['--provider' => 'Spatie\Activitylog\ActivitylogServiceProvider', '--tag' => 'migrations']);
 
         $this->info("Dumping the composer autoload");
@@ -80,8 +80,8 @@ Route::resource('admin/activitylogs', 'Admin\\ActivityLogsController')->only([
     'index', 'show', 'destroy'
 ]);
 Route::resource('admin/settings', 'Admin\\SettingsController');
-Route::get('admin/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
-Route::post('admin/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
+Route::get('admin/generator', ['uses' => '\Leduyptit\LaravelAdmin\Controllers\ProcessController@getGenerator']);
+Route::post('admin/generator', ['uses' => '\Leduyptit\LaravelAdmin\Controllers\ProcessController@postGenerator']);
 
 EOD;
 

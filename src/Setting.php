@@ -1,6 +1,6 @@
 <?php
 
-namespace Appzcoder\LaravelAdmin;
+namespace Leduyptit\LaravelAdmin;
 
 use App\Setting as SettingModel;
 
