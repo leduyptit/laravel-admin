@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Appzcoder\\LaravelAdmin\\": "src/"
+            "Leduyptit\\LaravelAdmin\\": "src/"
         },
         "files": [
             "src/helpers.php"
